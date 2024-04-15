@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Contact Us...</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Welcome To The contact Page</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <center>
+            <div class="col-8">
+                <br/><br/>
+                <p align="justify">
+                    <h2>À propos de Nous</h2>
+Bienvenue sur Shop your book, votre destination en ligne pour découvrir et acheter une sélection exceptionnelle de livres de qualité. Chez nous, la passion pour la lecture se traduit par une expérience unique d'exploration littéraire, où chaque page tourne vers de nouvelles aventures et découvertes.
+<br/><br/>
+<h2>Engagement envers Vous</h2> 
+La satisfaction de nos clients est notre priorité absolue. Nous nous engageons à offrir un service exceptionnel, des produits de qualité et une expérience d'achat conviviale. Notre équipe est toujours là pour vous assister, répondre à vos questions et vous guider dans votre recherche du prochain livre parfait.
+                </p>
+                <br/><br/><br/><br/><br/>
+                <h1> The First on this page </h1>
+                <br/><br/>
+                <div class="card text-bg-dark">
+                    <img src="/media/uploads/product/mon image7.jpeg" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">The fantastic story</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                  <br/><br/>
+                  <p>
+                    <h2>Notre Mission</h2>
+Chez Shop your book, nous croyons en l'importance de la lecture pour élargir les horizons, stimuler l'imagination et nourrir l'âme. Notre mission est de fournir à nos clients un accès facile à une variété de livres captivants qui captiveront, informeront et divertiront.
+<br/><br/>
+<h2>Ce que nous Offrons</h2>
+Découvrez une collection soigneusement sélectionnée de livres de divers genres, des best-sellers contemporains aux classiques intemporels. Que vous soyez un amateur de fiction, un passionné de non-fiction ou un curieux à la recherche de nouvelles perspectives, vous trouverez ici quelque chose pour vous.
+                  </p>
+                  <br/><br/>
+                  <h1> Our carrousel </h1>
+                  <br/><br/><br/><br/>
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/media/uploads/product/mon image4.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/media/uploads/product/mon image5.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/media/uploads/product/mon image6.jpeg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <br/><br/><br/><br/>
+                  <body>
+                    <h1>Contact-Us</h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Conctats</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="write comment there"></textarea>></textarea>
+                          </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </body>
+                
+                
+            </div>
+        </center>
+    </div>
+</div>
+
+{% endblock %}

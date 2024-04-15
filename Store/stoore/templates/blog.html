@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Blog</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Blog for User Account...</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <center>
+            <div class="col-8">
+            
+                <br/><br/>
+                <form method="POST" action="{% url 'blog' %}">
+                    {% csrf_token %}
+                    <div class="card text-center">
+                        <div class="card-header">
+                          Featured
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Special blog for the books</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="{% url 'home' %}" class="btn btn-primary">Show our Books</a>
+                        </div>
+                        
+                      </div>
+                      <br/><br/><br/><br/>
+                      <img src="/media/uploads/product/mon image3.jpeg" class="img-fluid" alt="...">
+                    
+
+                      <br/><br/><br/>
+                      <h1>New Arrivals of Books</h1>
+                      <br/><br/><br/>
+                      <div class="card mb-3">
+                        <img src="/media/uploads/product/mon image2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Free Reading</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Electronic Support</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                        <img src="/media/uploads/product/mon image1.jpeg" class="card-img-bottom" alt="...">
+                      </div>
+                      <br/><br/><br/><br/><br/><br/><br/>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Comment here </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1"placeholder="comment" rows="3"></textarea>
+                        <button class="btn btn-primary" type="button">Post the comment</button>
+                        <i class="cis-heart"></i>
+                      </div>
+            
+                  </form>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+            </div>
+        </center>
+    </div>
+</div>
+
+{% endblock %}

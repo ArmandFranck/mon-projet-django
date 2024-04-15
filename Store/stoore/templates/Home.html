@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header -->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Shop your book</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With Shop book, reading becomes very easy</p>
+        </div>
+    </div>
+</header>
+
+<!-- Section -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for product in products %}
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="Product Image" />
+                        <div class="card-body">
+                            <!-- Product name -->
+                            <h5 class="card-title fw-bolder">{{ product.name }}</h5>
+                            <!-- Product price -->
+                            {% if product.is_sale %}
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <strike class="text-muted">${{ product.price }}</strike>
+                                    <span class="text-warning">${{ product.sale_price }}</span>
+                                </div>
+                            {% else %}
+                                <div class="text-center">${{ product.price }}</div>
+                            {% endif %}
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark" href="{% url 'product' product.id %}">View Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a href="" class="btn btn-primary" type="button">Privacy policy<a></button>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-dark" type="button">Dashboard Page </a></button>
+</section>
+{% endblock %}
